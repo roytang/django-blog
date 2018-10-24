@@ -1,0 +1,7 @@
+{% extends "admin/change_form.html" %}
+
+{% block form_top %}
+  {% if change %}{% if not is_popup %}
+    <a href="{% url blog.views.preview object_id %}">Preview</a>
+  {% endif %}{% endif %}
+{% endblock %}

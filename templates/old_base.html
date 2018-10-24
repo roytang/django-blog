@@ -1,0 +1,129 @@
+{% load feeds %}
+{% load cache %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://roytang.net/files/rsd.xml" />
+
+<link rel="alternate" type="application/rss+xml" title="{% block feed_title %}Latest Posts RSS{% endblock %}" href="{% block feed_url %}/feed/posts/{% endblock %}" />
+<link rel="pingback" href="http://roytang.net/xmlrpc/" />
+<title>Roy Tang :: {% block title %} {% endblock %}</title>
+
+<link rel="stylesheet" href="/files/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/files/css/print.css" type="text/css" media="print" />    
+<!--[if IE]><link rel="stylesheet" href="/files/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+<link rel="stylesheet" href="/files/css/scheme.css" type="text/css" />
+
+<link rel="openid.server" href="http://draft.blogger.com/openid-server.g" /> 
+<link rel="openid.delegate" href="http://roywantsmeat.blogspot.com" />
+
+<link rel="icon" type="image/jpeg" href="/files/panda.jpg">
+
+<script type="text/javascript" src="/files/js/jquery.js"></script>
+<meta name="verify-v1" content="7SA2DVSw8Kmsaualg94HZKiw/PAeBGgvdkLyhavJhaM=" />
+{% block extrahead %} {% endblock %}
+</head>
+<body>
+<!-- preload the background image -->
+<img src="/files/css/menu-hover.gif" style="display:none;" />
+<div class="container">
+    <div class="span-24 header1">
+        <div class="span-6">
+            <span class='title'>{% block pagetitle %}Roy Tang{% endblock %}</span>
+        </div>
+        <div class='span-18 last'>
+            <form action="{% url blog.views.search %}" >
+            <ul class="topmenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/archive/">Archives</a></li>
+                <li><a href="/tags/">Tags</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a class="feed" href="/feed/posts/"><img src="/files/img/rss.png" /> Posts</a></li>
+                <li><a class="feed" href="/feed/comments/"><img src="/files/img/rss.png" /> Comments</a></li>
+				<li>Search: <input name="q" /></li>
+            </ul>
+            </form>
+        </div>
+    </div>
+    <div class="span-24 header2 last">
+        <span class='subtitle'>{% block subtitle %}Programmer, engineer, scientist, critic, gamer, dreamer, and kid-at-heart.{% endblock %}</span>
+    </div>
+    <div class="span-16">
+    <br/>
+{% block content %}{% endblock %}
+    </div>
+    <div class="span-7 last">
+        <!-- Right sidebar -->
+<ul class="sidebar">
+    <li class="widget">
+        <h2>Quick Profile</h2>
+        <ul>
+            <li>Roy Tang</li>
+            <li>Quezon City, PH</li>
+            <li>Software Developer, focusing on Java/J2EE and Python/Django</li>
+            <li><a href="mailto:email@example.com">email@example.com</a></li>
+            <li><a href="/about/">More</a></li>
+        </ul>
+    </li>
+    <li class="widget">
+        <h2>Topics</h2>
+        <ul>
+            {% for category in category_list %}
+            <li><a href="{% url blog.views.posts_by_category category.slug %}">{{ category.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+    <li class="widget">
+        <h2>Stuff</h2>
+        <ul>
+            <li><a href="/demos/">Demos</a></li>
+            <li><a href="/random/">Random Post</a></li>
+            {% if user.is_authenticated and user.is_staff %}
+            <li><a href="/admin/blog/post/add/">New Post</a></li>
+            <li><a href="/admin/">Admin Panel</a></li>
+            <li><a href="/comments/moderate/">Comment Moderation Queue</a></li>
+            {% endif %}        
+        </ul>
+    </li>    
+    <li class="widget">
+        <h2>Recent Activity</h2>
+        {% cache 900 friendfeed %}
+        {% include_feed "http://friendfeed.com/roytang?format=atom" 5 feed_includes.html %}
+        {% endcache %}
+        <a href="/stream">View all Recent Activity</a>
+    </li>
+    
+    <li class="widget">
+        <h2>Even more stuff</h2>
+        <a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangopowered126x54.gif" alt="Powered by Django." title="Powered by Django." /></a>
+        <a href="http://www.webfaction.com/?affiliate=roytang"><img src="http://www.webfaction.com/banners/110x32-hosted-button-bg.png" alt="Hosted by Webfaction" /></a>
+        <a href="http://taga-qc.blogspot.com" target="_blank" title="I'm from Quezon City!"><img border="0" width="100" alt="I'm from Quezon City" src="http://i50.photobucket.com/albums/f346/heymyn/taga-qc-ako.gif" height="60"/></a>        
+    </li>
+</ul>
+
+
+{% block extra_sidebar %}{% endblock %}        
+    </div>    
+
+    <div class='span-12'>
+    </div>
+    <div class='span-12 last'>
+    </div>
+    <div class="span-24 footer">
+        <!-- Creative commons //-->
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />All original work published on this website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.    
+    </div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6797924-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

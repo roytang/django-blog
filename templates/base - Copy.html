@@ -1,0 +1,84 @@
+{% load feeds %}
+{% load cache %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://roytang.net/files/rsd.xml" />
+
+<link rel="alternate" type="application/rss+xml" title="{% block feed_title %}Latest Posts RSS{% endblock %}" href="{% block feed_url %}/feed/posts/{% endblock %}" />
+<link rel="pingback" href="http://roytang.net/xmlrpc/" />
+<title>Roy Tang :: {% block title %} {% endblock %}</title>
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/2.5.1/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+<link rel="stylesheet" href="/files/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="{{ current_theme.css_path }}" type="text/css" />
+
+<link rel="openid.server" href="http://draft.blogger.com/openid-server.g" /> 
+<link rel="openid.delegate" href="http://roywantsmeat.blogspot.com" />
+
+<link rel="icon" type="image/jpeg" href="/files/panda.jpg">
+
+<script type="text/javascript" src="/files/js/jquery.js"></script>
+<meta name="verify-v1" content="7SA2DVSw8Kmsaualg94HZKiw/PAeBGgvdkLyhavJhaM=" />
+{% block extrahead %} {% endblock %}
+</head>
+<body>
+{% if current_theme.template_path %}
+    {% include current_theme.template_path %}
+{% else %}
+<!-- preload the background image -->
+<img src="/files/css/menu-hover.gif" style="display:none;" />
+
+<div id="doc2" class="yui-t5">
+   <div id="hd">
+     
+    <div class="header1">
+    <span class='title'>{% block pagetitle %}Roy Tang{% endblock %}</span>
+    </div>
+    <div class="hmenu">
+    <form action="{% url blog.views.search %}" id="formSearch">
+        <ul class="topmenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/archive/">Archives</a></li>
+            <li><a href="/tags/">Tags</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a class="feed" href="/feed/posts/"><img src="/files/img/rss.png" /> Posts</a></li>
+            <li><a class="feed" href="/feed/comments/"><img src="/files/img/rss.png" /> Comments</a></li>
+            <li>Search: <input name="q" /></li>
+        </ul>
+    </form>
+    </div>
+    <span class='subtitle'>{% block subtitle %}Programmer, engineer, scientist, critic, gamer, dreamer, and kid-at-heart.{% endblock %}</span>
+   </div>
+   <div id="bd">
+	<div id="yui-main">
+    	<div class="yui-b">
+           <div class="yui-g">
+{% block content %}{% endblock %}
+    	   </div>
+        </div>
+	</div>
+	<div class="yui-b">
+{% include "sidebar.html" %}
+    </div>
+	
+   </div>
+   <div id="ft">
+        <!-- Creative commons //-->
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />All original work published on this website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.    
+   </div>
+</div>
+{% endif %}
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6797924-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

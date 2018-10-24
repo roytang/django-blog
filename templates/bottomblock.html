@@ -1,0 +1,47 @@
+{% load feeds %}
+{% load cache %}
+
+	<hr />
+
+<div id="glass-bottomblock">
+
+	<div class="bottomblockleft">
+
+        <h2>Elsewhere</h2>
+        <ul>
+            <li><a href="http://www.facebook.com/profile.php?id=632418911">Facebook</a></li>
+            <li><a href="http://twitter.com/roytang">Twitter</a></li>
+            <li><a href="http://delicious.com/roytang">Delicious</a></li>
+            <li><a href="http://www.last.fm/user/roytang">Last.fm</a></li>
+            <li><a href="http://webapp.wizards.com/ratings.aspx?dcinumber=36918016&amp;Demographic=1%7C1&amp;BrandRatedSeasons=5&amp;ratingseasonid=5&amp;Page=1&amp;action=Search_Member">DCI</a></li>
+            <li><a href="http://www.blogger.com/profile/04182140167534280254">Blogger Profile</a></li>
+            <li><a href="http://www.friendfeed.com/roytang">Friendfeed</a></li>
+            <li><a href="http://roytang.pbwiki.com">Wiki</a></li>
+        </ul>
+        <h2>Even more stuff</h2>
+        <iframe src="http://www.google.com/talk/service/badge/Show?tk=z01q6amlq0ogvk9hpsbvrvc13mg3otnjfvkbj2j5i0qosjlmosbgmc0p9lnhnu4uu80e6leeinpg1as7c3afc2ndkd2b41m2k8905vn15n8lq988b68695djqbrccjc9s7hd0v48dqh0k1s7q9jljaqkj5hmg4tsnkhqgo963&amp;w=200&amp;h=60" allowtransparency="true" width="200" frameborder="0" height="60"></iframe>
+        <a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangopowered126x54.gif" alt="Powered by Django." title="Powered by Django." /></a>
+        <a href="http://www.webfaction.com/?affiliate=roytang"><img src="http://www.webfaction.com/banners/110x32-hosted-button-bg.png" alt="Hosted by Webfaction" /></a>
+        <a href="http://taga-qc.blogspot.com" target="_blank" title="I'm from Quezon City!"><img border="0" width="100" alt="I'm from Quezon City" src="http://i50.photobucket.com/albums/f346/heymyn/taga-qc-ako.gif" height="60"/></a>        
+	
+	</div>
+
+	<div class="bottomblockmiddle">	
+        <h2>Recent Posts</h2>
+            {% cache 900 recent_posts %}
+            {% include_feed "http://roytang.net/feed/posts/" 5 tweets.html %}
+            {% endcache %} 
+        <h2>Recent Comments</h2>
+            {% cache 900 recent_comments %}
+            {% include_feed "http://roytang.net/feed/comments/" 5 tweets.html %}
+            {% endcache %} 
+	</div>
+
+	<div class="bottomblockright">
+		<h2>Twitter</h2>		
+            {% cache 900 twitter %}
+            {% include_feed "http://twitter.com/statuses/user_timeline/15879320.rss" 5 tweets.html %}
+            {% endcache %} 
+	</div>
+	
+</div>

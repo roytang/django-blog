@@ -1,0 +1,34 @@
+{% extends "blog/base.html" %}
+{% load tagging_tags %}
+
+{% block title %}Tags{% endblock %}
+
+{% block extrahead %} 
+<script type="text/javascript">
+<!--
+$(function() {
+    /* tags list */
+    var switcher_anchors = $('#switcher a');
+    switcher_anchors.each(function(i) {
+        $(this).click(function() {
+            switcher_anchors.toggleClass('current');
+            $('#tag-list').toggleClass('tag-cloud');
+        });
+    });
+
+})
+
+-->
+</script>
+{% endblock %}
+{% block content %}
+<div id="tags">
+<p class="list-header">Tags<small>({{ count }})</small></p>
+<p id="switcher">View as: <a href="#" class="current">cloud</a> | <a href="#" >list</a></p>
+<ul id="tag-list" class="tag-cloud">
+{% for tag in tag_cloud %}
+    <li class="tag-{{ tag.font_size }}"><a href="{% url blog.views.posts_by_tag tag %}">{{ tag }}</a> <span class="tag-count">({{ tag.count }})</span></li>
+{% endfor %}
+</ul>
+</div>
+{% endblock %}

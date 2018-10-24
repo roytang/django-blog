@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+
+{% block title %}roytang.net{% endblock %}
+
+{% block content %}
+{% block list-header %}{% endblock %}
+{% for post in object_list %}
+{% include "blog/post_long.html" %}
+{% endfor %}
+{% include "pagination.html" %}
+
+{% endblock %}
+

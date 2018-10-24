@@ -1,0 +1,692 @@
+[Wed Dec 24 02:23:19 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 02:23:19 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 02:23:19 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 02:23:20 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1] mod_python (pid=21692, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1] URI: '/d/'
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1] Location: '/'
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1] Directory: None
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1] PathInfo: '/d/'
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 191, in __call__\n    self.load_middleware()
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 40, in load_middleware\n    raise exceptions.ImproperlyConfigured, 'Error importing middleware %s: "%s"' % (mw_module, e)
+[Wed Dec 24 02:25:40 2008] [error] [client 127.0.0.1] ImproperlyConfigured: Error importing middleware blog.utils: "cannot import name markdown_highlight"
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1] mod_python (pid=21693, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1] URI: '/'
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1] Location: '/'
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1] Directory: None
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1] PathInfo: '/'
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 191, in __call__\n    self.load_middleware()
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 40, in load_middleware\n    raise exceptions.ImproperlyConfigured, 'Error importing middleware %s: "%s"' % (mw_module, e)
+[Wed Dec 24 02:25:42 2008] [error] [client 127.0.0.1] ImproperlyConfigured: Error importing middleware blog.utils: "cannot import name markdown_highlight"
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1] mod_python (pid=21692, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1] URI: '/'
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1] Location: '/'
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1] Directory: None
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1] PathInfo: '/'
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 191, in __call__\n    self.load_middleware()
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 40, in load_middleware\n    raise exceptions.ImproperlyConfigured, 'Error importing middleware %s: "%s"' % (mw_module, e)
+[Wed Dec 24 02:25:49 2008] [error] [client 127.0.0.1] ImproperlyConfigured: Error importing middleware blog.utils: "cannot import name markdown_highlight"
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1] mod_python (pid=21693, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1] URI: '/'
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1] Location: '/'
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1] Directory: None
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1] PathInfo: '/'
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 191, in __call__\n    self.load_middleware()
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 40, in load_middleware\n    raise exceptions.ImproperlyConfigured, 'Error importing middleware %s: "%s"' % (mw_module, e)
+[Wed Dec 24 02:27:07 2008] [error] [client 127.0.0.1] ImproperlyConfigured: Error importing middleware blog.utils: "cannot import name markdown_highlight"
+[Wed Dec 24 02:27:16 2008] [error] [client 127.0.0.1] File does not exist: /etc/httpd/htdocs
+[Wed Dec 24 02:33:45 2008] [error] [client 127.0.0.1] File does not exist: /etc/httpd/htdocs
+[Wed Dec 24 02:42:14 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 02:42:15 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 02:42:15 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 02:42:15 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 02:42:16 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 02:43:05 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 02:43:08 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 02:43:08 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 02:43:08 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 02:43:09 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 02:44:49 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 02:44:55 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 02:44:55 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 02:44:55 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 02:44:56 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 02:55:13 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 02:55:15 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 02:55:15 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 02:55:15 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 02:55:16 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1] mod_python (pid=25314, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1] URI: '/pygments'
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1] Location: '/'
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1] Directory: None
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1] PathInfo: '/pygments'
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 67, in get_response\n    response = middleware_method(request)
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 57, in process_request\n    _is_valid_path("%s/" % request.path_info)):
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 142, in _is_valid_path\n    urlresolvers.resolve(path)
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 246, in resolve\n    return get_resolver(urlconf).resolve(path)
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 181, in resolve\n    sub_match = pattern.resolve(new_path)
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 124, in resolve\n    return self.callback, args, kwargs
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 136, in _get_callback\n    raise ViewDoesNotExist, "Tried %s in module %s. Error was: %s" % (func_name, mod_name, str(e))
+[Wed Dec 24 02:55:28 2008] [error] [client 127.0.0.1] ViewDoesNotExist: Tried pygments_demo in module utils.views. Error was: 'module' object has no attribute 'pygments_demo'
+[Wed Dec 24 02:56:10 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 02:56:13 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 02:56:13 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 02:56:13 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 02:56:14 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 02:57:02 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 02:57:06 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 02:57:06 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 02:57:06 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 02:57:07 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 02:57:48 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 02:57:52 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 02:57:52 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 02:57:52 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 02:57:53 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 02:58:38 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 02:59:10 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 02:59:10 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 02:59:10 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 02:59:11 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 03:00:10 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 03:01:04 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 03:01:04 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 03:01:04 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 03:01:05 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 03:15:22 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 03:15:32 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 03:15:32 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 03:15:32 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 03:15:33 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 03:18:40 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 03:18:44 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 03:18:44 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 03:18:44 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 03:18:45 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 24 03:41:06 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 24 03:41:15 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 24 03:41:15 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 24 03:41:15 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 24 03:41:16 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Thu Dec 25 01:53:43 2008] [notice] caught SIGTERM, shutting down
+[Thu Dec 25 02:02:01 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Thu Dec 25 02:02:01 2008] [notice] mod_python: using mutex_directory /tmp 
+[Thu Dec 25 02:02:01 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Thu Dec 25 02:02:02 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Thu Dec 25 02:22:41 2008] [notice] caught SIGTERM, shutting down
+[Thu Dec 25 02:22:43 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Thu Dec 25 02:22:43 2008] [notice] mod_python: using mutex_directory /tmp 
+[Thu Dec 25 02:22:43 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Thu Dec 25 02:22:44 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Thu Dec 25 02:58:15 2008] [notice] caught SIGTERM, shutting down
+[Thu Dec 25 02:58:19 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Thu Dec 25 02:58:19 2008] [notice] mod_python: using mutex_directory /tmp 
+[Thu Dec 25 02:58:19 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Thu Dec 25 02:58:20 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1] mod_python (pid=30860, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1] URI: '/favicon.ico/'
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1] Location: '/'
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1] Directory: None
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1] PathInfo: '/favicon.ico/'
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 205, in __call__\n    response = middleware_method(request, response)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/flatpages/middleware.py", line 10, in process_response\n    return flatpage(request, request.path_info)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/flatpages/views.py", line 26, in flatpage\n    f = get_object_or_404(FlatPage, url__exact=url, sites__id__exact=settings.SITE_ID)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/shortcuts/__init__.py", line 46, in get_object_or_404\n    return queryset.get(*args, **kwargs)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/db/models/query.py", line 304, in get\n    num = len(clone)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/db/models/query.py", line 160, in __len__\n    self._result_cache = list(self.iterator())
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/db/models/query.py", line 275, in iterator\n    for row in self.query.results_iter():
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/db/models/sql/query.py", line 206, in results_iter\n    for rows in self.execute_sql(MULTI):
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/db/models/sql/query.py", line 1734, in execute_sql\n    cursor.execute(sql, params)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/db/backends/util.py", line 19, in execute\n    return self.cursor.execute(sql, params)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/db/backends/mysql/base.py", line 83, in execute\n    return self.cursor.execute(query, args)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "build/bdist.linux-i686/egg/MySQLdb/cursors.py", line 166, in execute\n    self.errorhandler(self, exc, value)
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1]   File "build/bdist.linux-i686/egg/MySQLdb/connections.py", line 35, in defaulterrorhandler\n    raise errorclass, errorvalue
+[Thu Dec 25 10:24:59 2008] [error] [client 127.0.0.1] ProgrammingError: (1146, "Table 'roytang_mysql.django_flatpage' doesn't exist")
+[Thu Dec 25 22:46:05 2008] [notice] caught SIGTERM, shutting down
+[Thu Dec 25 22:46:07 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Thu Dec 25 22:46:07 2008] [notice] mod_python: using mutex_directory /tmp 
+[Thu Dec 25 22:46:07 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Thu Dec 25 22:46:08 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Fri Dec 26 00:53:48 2008] [notice] caught SIGTERM, shutting down
+[Fri Dec 26 00:53:50 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Fri Dec 26 00:53:50 2008] [notice] mod_python: using mutex_directory /tmp 
+[Fri Dec 26 00:53:50 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Fri Dec 26 00:53:51 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Fri Dec 26 00:59:44 2008] [notice] caught SIGTERM, shutting down
+[Fri Dec 26 00:59:51 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Fri Dec 26 00:59:51 2008] [notice] mod_python: using mutex_directory /tmp 
+[Fri Dec 26 00:59:51 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Fri Dec 26 00:59:52 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Fri Dec 26 02:39:39 2008] [notice] caught SIGTERM, shutting down
+[Fri Dec 26 02:39:40 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Fri Dec 26 02:39:40 2008] [notice] mod_python: using mutex_directory /tmp 
+[Fri Dec 26 02:39:40 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Fri Dec 26 02:39:41 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Fri Dec 26 10:18:50 2008] [notice] caught SIGTERM, shutting down
+[Fri Dec 26 10:18:52 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Fri Dec 26 10:18:52 2008] [notice] mod_python: using mutex_directory /tmp 
+[Fri Dec 26 10:18:52 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Fri Dec 26 10:18:53 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Fri Dec 26 19:53:19 2008] [notice] caught SIGTERM, shutting down
+[Fri Dec 26 19:53:23 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Fri Dec 26 19:53:23 2008] [notice] mod_python: using mutex_directory /tmp 
+[Fri Dec 26 19:53:23 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Fri Dec 26 19:53:24 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Fri Dec 26 20:49:42 2008] [notice] caught SIGTERM, shutting down
+[Fri Dec 26 20:49:44 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Fri Dec 26 20:49:44 2008] [notice] mod_python: using mutex_directory /tmp 
+[Fri Dec 26 20:49:44 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Fri Dec 26 20:49:45 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1] mod_python (pid=7745, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1] URI: '/sitemap.xml'
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1] Location: '/'
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1] Directory: None
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1] PathInfo: '/sitemap.xml'
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 67, in get_response\n    response = middleware_method(request)
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 56, in process_request\n    if (not _is_valid_path(request.path_info) and
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 142, in _is_valid_path\n    urlresolvers.resolve(path)
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 246, in resolve\n    return get_resolver(urlconf).resolve(path)
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 179, in resolve\n    for pattern in self.urlconf_module.urlpatterns:
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 9, in <module>\n    from sitemap import PostsSitemap
+[Sat Dec 27 10:49:57 2008] [error] [client 127.0.0.1] ImportError: No module named sitemap
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] mod_python (pid=7746, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] URI: '/'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] Location: '/'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] Directory: None
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] PathInfo: '/'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 128, in get_response\n    return self.handle_uncaught_exception(request, resolver, exc_info)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 159, in handle_uncaught_exception\n    callback, param_dict = resolver.resolve500()
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 218, in resolve500\n    return self._resolve_special('500')
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 207, in _resolve_special\n    callback = getattr(self.urlconf_module, 'handler%s' % view_type)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 9, in <module>\n    from sitemap import PostsSitemap
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] ImportError: No module named sitemap
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] mod_python (pid=7745, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] URI: '/favicon.ico'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] Location: '/'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] Directory: None
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] PathInfo: '/favicon.ico'
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 67, in get_response\n    response = middleware_method(request)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 56, in process_request\n    if (not _is_valid_path(request.path_info) and
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 142, in _is_valid_path\n    urlresolvers.resolve(path)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 246, in resolve\n    return get_resolver(urlconf).resolve(path)
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 179, in resolve\n    for pattern in self.urlconf_module.urlpatterns:
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 9, in <module>\n    from sitemap import PostsSitemap
+[Sat Dec 27 10:51:06 2008] [error] [client 127.0.0.1] ImportError: No module named sitemap
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1] mod_python (pid=7746, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1] URI: '/favicon.ico'
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1] Location: '/'
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1] Directory: None
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1] PathInfo: '/favicon.ico'
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 67, in get_response\n    response = middleware_method(request)
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 56, in process_request\n    if (not _is_valid_path(request.path_info) and
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 142, in _is_valid_path\n    urlresolvers.resolve(path)
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 246, in resolve\n    return get_resolver(urlconf).resolve(path)
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 179, in resolve\n    for pattern in self.urlconf_module.urlpatterns:
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 9, in <module>\n    from sitemap import PostsSitemap
+[Sat Dec 27 10:51:09 2008] [error] [client 127.0.0.1] ImportError: No module named sitemap
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1] mod_python (pid=7745, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1] URI: '/blog/2006/05/bathtubs-are-hard-to-use/'
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1] Location: '/'
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1] Directory: None
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1] PathInfo: '/blog/2006/05/bathtubs-are-hard-to-use/'
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 128, in get_response\n    return self.handle_uncaught_exception(request, resolver, exc_info)
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 159, in handle_uncaught_exception\n    callback, param_dict = resolver.resolve500()
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 218, in resolve500\n    return self._resolve_special('500')
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 207, in _resolve_special\n    callback = getattr(self.urlconf_module, 'handler%s' % view_type)
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 9, in <module>\n    from sitemap import PostsSitemap
+[Sat Dec 27 10:51:12 2008] [error] [client 127.0.0.1] ImportError: No module named sitemap
+[Fri Dec 26 20:51:50 2008] [notice] caught SIGTERM, shutting down
+[Fri Dec 26 20:51:51 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Fri Dec 26 20:51:51 2008] [notice] mod_python: using mutex_directory /tmp 
+[Fri Dec 26 20:51:51 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Fri Dec 26 20:51:52 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sat Dec 27 04:08:43 2008] [notice] caught SIGTERM, shutting down
+[Sat Dec 27 04:08:46 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sat Dec 27 04:08:46 2008] [notice] mod_python: using mutex_directory /tmp 
+[Sat Dec 27 04:08:46 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sat Dec 27 04:08:47 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sat Dec 27 04:12:07 2008] [notice] caught SIGTERM, shutting down
+[Sat Dec 27 04:12:11 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sat Dec 27 04:12:11 2008] [notice] mod_python: using mutex_directory /tmp 
+[Sat Dec 27 04:12:11 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sat Dec 27 04:12:12 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sat Dec 27 04:14:52 2008] [notice] caught SIGTERM, shutting down
+[Sat Dec 27 04:14:57 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sat Dec 27 04:14:57 2008] [notice] mod_python: using mutex_directory /tmp 
+[Sat Dec 27 04:14:57 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sat Dec 27 04:14:58 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sat Dec 27 18:28:38 2008] [notice] caught SIGTERM, shutting down
+[Sat Dec 27 18:28:39 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sat Dec 27 18:28:39 2008] [notice] mod_python: using mutex_directory /tmp 
+[Sat Dec 27 18:28:39 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sat Dec 27 18:28:40 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sun Dec 28 01:32:49 2008] [notice] caught SIGTERM, shutting down
+[Sun Dec 28 01:32:51 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Dec 28 01:32:51 2008] [notice] mod_python: using mutex_directory /tmp 
+[Sun Dec 28 01:32:51 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Dec 28 01:32:52 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1] mod_python (pid=1304, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1] URI: '/admin/'
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1] Location: '/'
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1] Directory: None
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1] PathInfo: '/admin/'
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 128, in get_response\n    return self.handle_uncaught_exception(request, resolver, exc_info)
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 159, in handle_uncaught_exception\n    callback, param_dict = resolver.resolve500()
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 218, in resolve500\n    return self._resolve_special('500')
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 207, in _resolve_special\n    callback = getattr(self.urlconf_module, 'handler%s' % view_type)
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 5, in <module>\n    admin.autodiscover()
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/admin/__init__.py", line 40, in autodiscover\n    __import__("%s.admin" % app)
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/tumblr/admin.py", line 1, in <module>\n    from lastfm.models import Track
+[Sun Dec 28 15:32:55 2008] [error] [client 127.0.0.1] ImportError: No module named lastfm.models
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1] mod_python (pid=1305, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1] URI: '/tags/kithkin/'
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1] Location: '/'
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1] Directory: None
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1] PathInfo: '/tags/kithkin/'
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 128, in get_response\n    return self.handle_uncaught_exception(request, resolver, exc_info)
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 159, in handle_uncaught_exception\n    callback, param_dict = resolver.resolve500()
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 218, in resolve500\n    return self._resolve_special('500')
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 207, in _resolve_special\n    callback = getattr(self.urlconf_module, 'handler%s' % view_type)
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 5, in <module>\n    admin.autodiscover()
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/admin/__init__.py", line 40, in autodiscover\n    __import__("%s.admin" % app)
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/tumblr/admin.py", line 1, in <module>\n    from lastfm.models import Track
+[Sun Dec 28 15:33:16 2008] [error] [client 127.0.0.1] ImportError: No module named lastfm.models
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1] mod_python (pid=1304, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1] URI: '/tags/laptop/'
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1] Location: '/'
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1] Directory: None
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1] PathInfo: '/tags/laptop/'
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 128, in get_response\n    return self.handle_uncaught_exception(request, resolver, exc_info)
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 159, in handle_uncaught_exception\n    callback, param_dict = resolver.resolve500()
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 218, in resolve500\n    return self._resolve_special('500')
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 207, in _resolve_special\n    callback = getattr(self.urlconf_module, 'handler%s' % view_type)
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 5, in <module>\n    admin.autodiscover()
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/admin/__init__.py", line 40, in autodiscover\n    __import__("%s.admin" % app)
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/tumblr/admin.py", line 1, in <module>\n    from lastfm.models import Track
+[Sun Dec 28 15:33:40 2008] [error] [client 127.0.0.1] ImportError: No module named lastfm.models
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1] mod_python (pid=1305, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1] URI: '/sitemap.xml'
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1] Location: '/'
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1] Directory: None
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1] PathInfo: '/sitemap.xml'
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 67, in get_response\n    response = middleware_method(request)
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 56, in process_request\n    if (not _is_valid_path(request.path_info) and
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 142, in _is_valid_path\n    urlresolvers.resolve(path)
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 246, in resolve\n    return get_resolver(urlconf).resolve(path)
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 179, in resolve\n    for pattern in self.urlconf_module.urlpatterns:
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 5, in <module>\n    admin.autodiscover()
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/admin/__init__.py", line 40, in autodiscover\n    __import__("%s.admin" % app)
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/tumblr/admin.py", line 1, in <module>\n    from lastfm.models import Track
+[Sun Dec 28 15:33:48 2008] [error] [client 127.0.0.1] ImportError: No module named lastfm.models
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1] mod_python (pid=1304, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1] URI: '/'
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1] Location: '/'
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1] Directory: None
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1] PathInfo: '/'
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 128, in get_response\n    return self.handle_uncaught_exception(request, resolver, exc_info)
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 159, in handle_uncaught_exception\n    callback, param_dict = resolver.resolve500()
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 218, in resolve500\n    return self._resolve_special('500')
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 207, in _resolve_special\n    callback = getattr(self.urlconf_module, 'handler%s' % view_type)
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 5, in <module>\n    admin.autodiscover()
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/admin/__init__.py", line 40, in autodiscover\n    __import__("%s.admin" % app)
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/tumblr/admin.py", line 1, in <module>\n    from lastfm.models import Track
+[Sun Dec 28 15:33:55 2008] [error] [client 127.0.0.1] ImportError: No module named lastfm.models
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1] mod_python (pid=1305, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1] URI: '/sitemap.xml'
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1] Location: '/'
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1] Directory: None
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1] PathInfo: '/sitemap.xml'
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 67, in get_response\n    response = middleware_method(request)
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 56, in process_request\n    if (not _is_valid_path(request.path_info) and
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 142, in _is_valid_path\n    urlresolvers.resolve(path)
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 246, in resolve\n    return get_resolver(urlconf).resolve(path)
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 179, in resolve\n    for pattern in self.urlconf_module.urlpatterns:
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 5, in <module>\n    admin.autodiscover()
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/admin/__init__.py", line 40, in autodiscover\n    __import__("%s.admin" % app)
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/tumblr/admin.py", line 1, in <module>\n    from lastfm.models import Track
+[Sun Dec 28 15:34:01 2008] [error] [client 127.0.0.1] ImportError: No module named lastfm.models
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1] mod_python (pid=1304, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1] URI: '/admin/'
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1] Location: '/'
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1] Directory: None
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1] PathInfo: '/admin/'
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 128, in get_response\n    return self.handle_uncaught_exception(request, resolver, exc_info)
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 159, in handle_uncaught_exception\n    callback, param_dict = resolver.resolve500()
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 218, in resolve500\n    return self._resolve_special('500')
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 207, in _resolve_special\n    callback = getattr(self.urlconf_module, 'handler%s' % view_type)
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 5, in <module>\n    admin.autodiscover()
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/admin/__init__.py", line 40, in autodiscover\n    __import__("%s.admin" % app)
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/tumblr/admin.py", line 1, in <module>\n    from lastfm.models import Track
+[Sun Dec 28 15:34:08 2008] [error] [client 127.0.0.1] ImportError: No module named lastfm.models
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1] mod_python (pid=1305, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1] URI: '/tags/work/'
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1] Location: '/'
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1] Directory: None
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1] PathInfo: '/tags/work/'
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 128, in get_response\n    return self.handle_uncaught_exception(request, resolver, exc_info)
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 159, in handle_uncaught_exception\n    callback, param_dict = resolver.resolve500()
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 218, in resolve500\n    return self._resolve_special('500')
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 207, in _resolve_special\n    callback = getattr(self.urlconf_module, 'handler%s' % view_type)
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 5, in <module>\n    admin.autodiscover()
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/admin/__init__.py", line 40, in autodiscover\n    __import__("%s.admin" % app)
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/tumblr/admin.py", line 1, in <module>\n    from lastfm.models import Track
+[Sun Dec 28 15:34:40 2008] [error] [client 127.0.0.1] ImportError: No module named lastfm.models
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1] mod_python (pid=1304, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1] URI: '/sitemap.xml'
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1] Location: '/'
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1] Directory: None
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1] PathInfo: '/sitemap.xml'
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 201, in __call__\n    response = self.get_response(request)
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/base.py", line 67, in get_response\n    response = middleware_method(request)
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 56, in process_request\n    if (not _is_valid_path(request.path_info) and
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/middleware/common.py", line 142, in _is_valid_path\n    urlresolvers.resolve(path)
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 246, in resolve\n    return get_resolver(urlconf).resolve(path)
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 179, in resolve\n    for pattern in self.urlconf_module.urlpatterns:
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/urlresolvers.py", line 198, in _get_urlconf_module\n    self._urlconf_module = __import__(self.urlconf_name, {}, {}, [''])
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/urls.py", line 5, in <module>\n    admin.autodiscover()
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/contrib/admin/__init__.py", line 40, in autodiscover\n    __import__("%s.admin" % app)
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/myproject/tumblr/admin.py", line 1, in <module>\n    from lastfm.models import Track
+[Sun Dec 28 15:34:50 2008] [error] [client 127.0.0.1] ImportError: No module named lastfm.models
+[Sun Dec 28 01:34:55 2008] [notice] caught SIGTERM, shutting down
+[Sun Dec 28 01:35:00 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Dec 28 01:35:00 2008] [notice] mod_python: using mutex_directory /tmp 
+[Sun Dec 28 01:35:00 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Dec 28 01:35:01 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sun Dec 28 12:29:52 2008] [notice] caught SIGTERM, shutting down
+[Sun Dec 28 12:29:55 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Dec 28 12:29:55 2008] [notice] mod_python: using mutex_directory /tmp 
+[Sun Dec 28 12:29:55 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Dec 28 12:29:56 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Tue Dec 30 01:42:19 2008] [notice] caught SIGTERM, shutting down
+[Tue Dec 30 01:42:19 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Tue Dec 30 01:42:19 2008] [notice] mod_python: using mutex_directory /tmp 
+[Tue Dec 30 01:42:19 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Tue Dec 30 01:42:20 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Tue Dec 30 03:16:33 2008] [notice] caught SIGTERM, shutting down
+[Tue Dec 30 03:16:33 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Tue Dec 30 03:16:33 2008] [notice] mod_python: using mutex_directory /tmp 
+[Tue Dec 30 03:16:33 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Tue Dec 30 03:16:34 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Tue Dec 30 03:17:05 2008] [notice] caught SIGTERM, shutting down
+[Tue Dec 30 03:17:05 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Tue Dec 30 03:17:05 2008] [notice] mod_python: using mutex_directory /tmp 
+[Tue Dec 30 03:17:05 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Tue Dec 30 03:17:06 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Tue Dec 30 03:18:17 2008] [notice] caught SIGTERM, shutting down
+[Tue Dec 30 03:18:17 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Tue Dec 30 03:18:17 2008] [notice] mod_python: using mutex_directory /tmp 
+[Tue Dec 30 03:18:17 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Tue Dec 30 03:18:18 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Tue Dec 30 04:03:11 2008] [notice] caught SIGTERM, shutting down
+[Tue Dec 30 04:03:11 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Tue Dec 30 04:03:11 2008] [notice] mod_python: using mutex_directory /tmp 
+[Tue Dec 30 04:03:11 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Tue Dec 30 04:03:12 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Tue Dec 30 05:58:42 2008] [notice] caught SIGTERM, shutting down
+[Tue Dec 30 05:58:42 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Tue Dec 30 05:58:42 2008] [notice] mod_python: using mutex_directory /tmp 
+[Tue Dec 30 05:58:42 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Tue Dec 30 05:58:43 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Dec 31 00:45:33 2008] [notice] caught SIGTERM, shutting down
+[Wed Dec 31 00:45:33 2008] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Wed Dec 31 00:45:33 2008] [notice] mod_python: using mutex_directory /tmp 
+[Wed Dec 31 00:45:33 2008] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Wed Dec 31 00:45:34 2008] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sun Jan 04 00:55:29 2009] [notice] caught SIGTERM, shutting down
+[Sun Jan 04 00:55:34 2009] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Jan 04 00:55:34 2009] [notice] mod_python: using mutex_directory /tmp 
+[Sun Jan 04 00:55:34 2009] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Jan 04 00:55:35 2009] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sun Jan 04 00:55:37 2009] [notice] caught SIGTERM, shutting down
+[Sun Jan 04 00:55:37 2009] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Jan 04 00:55:37 2009] [notice] mod_python: using mutex_directory /tmp 
+[Sun Jan 04 00:55:37 2009] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Jan 04 00:55:38 2009] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sun Jan 04 05:52:24 2009] [notice] caught SIGTERM, shutting down
+[Sun Jan 04 05:52:28 2009] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Jan 04 05:52:28 2009] [notice] mod_python: using mutex_directory /tmp 
+[Sun Jan 04 05:52:28 2009] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Jan 04 05:52:29 2009] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sun Jan 04 05:52:29 2009] [notice] caught SIGTERM, shutting down
+[Sun Jan 04 05:52:29 2009] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Jan 04 05:52:29 2009] [notice] mod_python: using mutex_directory /tmp 
+[Sun Jan 04 05:52:29 2009] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Jan 04 05:52:30 2009] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sun Jan 04 06:11:05 2009] [notice] caught SIGTERM, shutting down
+[Sun Jan 04 06:11:05 2009] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Jan 04 06:11:05 2009] [notice] mod_python: using mutex_directory /tmp 
+[Sun Jan 04 06:11:05 2009] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Jan 04 06:11:06 2009] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sun Jan 04 06:11:08 2009] [notice] caught SIGTERM, shutting down
+[Sun Jan 04 06:11:08 2009] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Jan 04 06:11:08 2009] [notice] mod_python: using mutex_directory /tmp 
+[Sun Jan 04 06:11:08 2009] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Jan 04 06:11:09 2009] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1] mod_python (pid=25783, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1] URI: '/magic/feed/'
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1] Location: '/'
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1] Directory: None
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1] PathInfo: '/magic/feed/'
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 220, in __call__\n    req.write(chunk)
+[Wed Jan 14 04:11:39 2009] [error] [client 127.0.0.1] IOError: Write failed, client closed connection.
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1] mod_python (pid=25783, interpreter='web11.webfaction.com', phase='PythonHandler', handler='django.core.handlers.modpython'): Application error
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1] ServerName: 'web11.webfaction.com'
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1] DocumentRoot: '/etc/httpd/htdocs'
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1] URI: '/magic/feed/'
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1] Location: '/'
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1] Directory: None
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1] Filename: '/etc/httpd/htdocs'
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1] PathInfo: '/magic/feed/'
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1537, in HandlerDispatch\n    default=default_handler, arg=req, silent=hlist.silent)
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1229, in _process_target\n    result = _execute_target(config, req, object, arg)
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/mod_python/importer.py", line 1128, in _execute_target\n    result = object(arg)
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 228, in handler\n    return ModPythonHandler()(req)
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1]   File "/home/roytang/webapps/django/lib/python2.5/django/core/handlers/modpython.py", line 220, in __call__\n    req.write(chunk)
+[Mon Jan 26 05:31:24 2009] [error] [client 127.0.0.1] IOError: Write failed, client closed connection.
+[Sun Feb 01 07:26:33 2009] [notice] caught SIGTERM, shutting down
+[Sun Feb 01 07:26:45 2009] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Feb 01 07:26:45 2009] [notice] mod_python: using mutex_directory /tmp 
+[Sun Feb 01 07:26:45 2009] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Feb 01 07:26:46 2009] [error] server reached MaxClients setting, consider raising the MaxClients setting
+[Sun Feb 01 07:33:06 2009] [notice] caught SIGTERM, shutting down
+[Sun Feb 01 07:33:08 2009] [notice] mod_python: Creating 2 session mutexes based on 2 max processes and 0 max threads.
+[Sun Feb 01 07:33:08 2009] [notice] mod_python: using mutex_directory /tmp 
+[Sun Feb 01 07:33:08 2009] [notice] Apache/2.0.52 (Red Hat) mod_python/3.3.1 Python/2.5 configured -- resuming normal operations
+[Sun Feb 01 07:33:09 2009] [error] server reached MaxClients setting, consider raising the MaxClients setting

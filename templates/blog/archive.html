@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Archives by Date{% endblock %}
+
+{% block content %}
+<div id="archives">
+<p class="list-header">Archives by Date</p>
+<p class="list-description">These are post archives. Arranged by date. Enjoy!</p>
+{% for archive in archives %}
+    <h2 class="year">{{ archive.year|date:"Y" }}</h2>
+    {% for month in archive.months %}
+    <div class="archive-subunit">
+        <h2>
+            <a href="/archive/{{ archive.year|date:"Y" }}/{{ month.month|date:"m" }}/">
+            <span>{{ month.month|date:"F" }}</span>
+            <br/>
+            {{ month.count }} post{{ month.count|pluralize }}
+            </a>
+        </h2>    
+    </div>
+    {% endfor %}
+{% endfor %}
+</div>
+{% endblock %}

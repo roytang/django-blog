@@ -1,0 +1,7 @@
+{% extends "blog/post_list.html" %}
+
+{% block title %}By Month :: {{ date|date:"F Y" }}{% endblock %}
+
+{% block list-header %}
+<p class="list-header">Archives for {{ date|date:"F Y" }} &#8226; {{ count }} post{{ count|pluralize }}</p>
+{% endblock %}

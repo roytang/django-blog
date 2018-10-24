@@ -1,0 +1,6 @@
+<ol class="post-list">
+{% for item in items %}
+    <li class="streamitem">{{ item.description|safe }}</li>
+    
+{% endfor %}
+</ol>

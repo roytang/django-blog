@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load pygmentize %}
+{% block title %}Pygments Demo{% endblock %}
+{% block extrahead %}<style>{{ css }}</style> {% endblock %}
+{% block body %}
+<h2>Pygments Demo</h2>
+This is a test page I made to try out the syntax highlighting styles available in <a href="http://pygments.org/">Pygments</a>.
+Choose a style:
+<ul  style="list-style: none;">
+{% for astyle in styles %}
+    <li style="display: inline"><a href="{% url utils.views.pygments_demo astyle %}">{{ astyle }}</a></li>
+{% endfor %}
+</ul>
+<div>
+{% pygmentize "python" %}
+from django.shortcuts import render_to_response
+
+def pygments_demo(request, style='default'):
+    from pygments.styles import get_all_styles
+    styles = list(get_all_styles())
+    print styles
+    return render_to_response('stuff/pygments_demo.html', locals())
+{% endpygmentize %}
+</div>
+<div style="clear:both">
+<hr>
+<p>CSS:</p>
+<pre style="font-size: smaller">
+{{ css }}
+</pre>
+</div>
+{% endblock %}

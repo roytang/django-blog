@@ -1,0 +1,43 @@
+{% extends "blog/base.html" %}
+
+{% load comments %}
+{% get_comment_count for post as comment_count %}
+{% load oembed_tags %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+
+{% block subtitle %}{{ post.category.subtitle }}{% endblock %}
+
+{% block description %}{{ post.category.description }}{% endblock %}
+
+{% block content %}
+<div class="post-list">
+
+			{% include "blog/post_long.html" %}
+
+<div id="comments">
+{% with post as object %}	
+{% include "comments/comments_list.html" %}
+{% endwith %}
+</div>
+    {% load pingback_tags %}
+    {% get_pingback_list for post as pingbacks %}
+    {% if pingbacks %}
+        <h3>Pingbacks</h3>
+        {% for pingback in pingbacks %}
+            <div class="b-pingback">
+                <p class="b-meta">
+                    <a name="pingback-{{ pingback.id }}" href="{{ post.get_absolute_url }}#pingback-{{ pingback.id }}" class="b-permlink">permalink</a>
+                    {{ pingback.date }}, pingback from {{ pingback.url|urlizetrunc:40 }}:
+                </p>
+
+                <p>{{ pingback.content }}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+</div>
+  
+
+{% endblock %}

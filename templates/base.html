@@ -1,0 +1,110 @@
+{% load feeds %}
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://roytang.net/files/rsd.xml" />
+
+<link rel="alternate" type="application/rss+xml" title="{% block feed_title %}Latest Posts RSS{% endblock %}" href="{% block feed_url %}/feed/posts/{% endblock %}" />
+<link rel="pingback" href="http://roytang.net/xmlrpc/" />
+<title>Roy Tang :: {% block title %} Searching for Awesomeness{% endblock %}</title>
+
+<link rel="stylesheet" href="http://yui.yahooapis.com/2.5.1/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+<link rel="stylesheet" href="/files/css/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/files/css/structure.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/files/css/unsleepable.css" type="text/css" media="screen" />
+	<!--[if IE]>
+	<link rel="stylesheet" href="/files/css/unsleepable-ie.css" type="text/css" media="screen" />
+	<![endif]-->
+
+<link rel="openid.server" href="http://draft.blogger.com/openid-server.g" /> 
+<link rel="openid.delegate" href="http://roywantsmeat.blogspot.com" />
+
+<link rel="icon" type="image/jpeg" href="/files/panda.jpg">
+
+<script type="text/javascript" src="/files/js/jquery.js"></script>
+<meta name="verify-v1" content="7SA2DVSw8Kmsaualg94HZKiw/PAeBGgvdkLyhavJhaM=" />
+{% block extrahead %} {% endblock %}
+<style>
+
+
+
+</style>
+</head>
+<body>
+<div id="page">
+
+	<div id="header">
+		<div class="top">
+			<div id="title">
+
+				<a href="/" title="Back to the front page">{% block pagetitle %}Roy Tang{% endblock %}</a>
+			</div>
+			<ul id="menu">
+            {% for category in category_list %}
+            <li class="page_item page-item-2"><a href="{% url blog.views.posts_by_category category.slug %}">{{ category.title }}</a></li>
+            {% endfor %}		
+			<li class="page_item page-item-2"><a href="/about/">About</a></li>
+			</ul>
+                
+		</div>
+	</div>
+
+	<hr />
+
+<div class="content">
+	
+{% block body %}{% endblock %}
+
+
+{% block extrabody %}
+{% endblock %}
+
+</div>
+<div style="clear:both;"></div>
+</div>
+<!-- Close Page -->
+
+<div id="footer"><br /><hr />
+
+Theme: Based on "Unsleepable" by <a href="http://www.openswitch.org">Ben Gray</a>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6797924-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!--[if IE 6]>
+<script type="text/javascript"> 
+	/*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+	var IE6UPDATE_OPTIONS = {
+		icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+	}
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/roytangweblog/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+</script>
+
+</body>
+</html>

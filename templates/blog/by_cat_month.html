@@ -1,0 +1,17 @@
+{% extends "blog/post_list.html" %}
+
+{% block title %}By Category and Month:: {{ category.title }} - {{ date|date:"F Y" }}{% endblock %}
+
+{% block feed_title %}Latest Posts for {{ category.title }} RSS{% endblock %}
+
+{% block feed_url %}{% url blog.views.category_feed category.slug %}{% endblock %}
+
+{% block subtitle %}{{ category.subtitle }}{% endblock %}
+
+{% block description %}{{ category.description }}{% endblock %}
+
+{% block list-header %}
+<p class="list-header">You are reading the posts under the category <a href="#">'{{ category.title }}' during the month of {{ date|date:"F Y" }}</a>. 
+There are {{ count }} post{{ count|pluralize }} in this category. 
+You can also subscribe to the <a href="{% url blog.views.category_feed category.slug %}">RSS Feed for '{{ category.title }}'</a></p>
+{% endblock %}

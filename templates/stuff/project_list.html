@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>
+{% block title %}Work{% endblock %}
+</title>
+<link rel='stylesheet' type='text/css' href='/media/work.css' />
+</head>
+<body>
+{% block content %}
+<ul class="projects-list">
+ {% for object in object_list %}
+  {% if object.is_public %}
+   <li class="project">
+    <h3 class="name">{{ object.name }}</h3>
+    <a class="lead-image url" href="{{ object.project_url }}">
+      <span class="more">View work</span>
+      <img src="{{ object.overview_image }}" alt="" />
+      <img src="{{ object.detail_image }}" alt="" />
+     </a>
+     <div class="description">
+     {{ object.description }}
+     </div>
+     <dl class="meta">
+      <dt>Client</dt>
+      <dd>{{ object.get_client.name }}</dd>
+      <dt>Medium</dt>
+      <dd>{{ object.get_medium.name }}</dd>
+      <dt>Disciplines</dt>
+      <dd>{{ object.disciplines }}</dd>
+      <dt>Completed</dt>
+      <dd>{{ object.completion_date|date:"F Y" }}
+       {% if object.in_development %}
+        <span class="quiet">(in development)</span>
+       {% endif %}
+      </dd>
+     </dl>
+   </li>
+  {% endif %}
+ {% endfor %}
+</ul>
+{% endblock %}
+</body>

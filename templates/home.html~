@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% load feeds %}
+{% load cache %}
+{% block body %}
+{% for post in object_list %}
+{% include "blog/post_long.html" %}
+{% endfor %}
+{% include "pagination.html" %}
+
+{% include "sidebar.html" %}
+
+<div class="clear"></div>
+	
+{% endblock %}
+

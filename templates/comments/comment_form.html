@@ -1,0 +1,48 @@
+  {% if request.user.is_authenticated %}
+    <p>Logged in as {{ request.user.username }}</p>
+  {% else %}
+	<!--fb:login-button onlogin="update_user_box();"></fb:login-button-->
+	
+<script type="text/javascript">
+function update_user_box() {
+	return;
+  var user_box = document.getElementById("user");
+
+  // add in some XFBML. note that we set useyou=false so it doesn't display "you"
+  user_box.innerHTML =
+      "<span>"
+    + "<fb:profile-pic uid='loggedinuser' facebook-logo='true'></fb:profile-pic>"
+    + "Welcome, <fb:name uid='loggedinuser' useyou='false'></fb:name>. You are signed in with your Facebook account."
+    + "</span>";
+
+  // because this is XFBML, we need to tell Facebook to re-process the document 
+  FB.XFBML.Host.parseDomTree();
+  
+  var defaultCommentBox = document.getElementById("commentDefault");
+  defaultCommentBox.style.display = "none";
+}
+</script>
+
+<div id="user"></div>
+<div id="commentDefault">
+    <p>{{ form.name.label_tag }} <span class="hint">(required)</span>: 
+    <br/>{% if form.name.errors %}{{ form.name.errors }}{% endif %}{{ form.name }}</p>
+    <p>{{ form.email.label_tag }} <span class="hint">(required, will not be published)</span>: 
+    <br/>{% if form.email.errors %}{{ form.email.errors }}{% endif %}{{ form.email }}</p>
+    <p>{{ form.url.label_tag }}: 
+    <br/>{% if form.url.errors %}{{ form.url.errors }}{% endif %}{{ form.url }}</p>
+</div>	
+  {% endif %}
+    <p>{{ form.comment.label_tag }} <span class="hint">(required, can use <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> syntax, HTML will be stripped)</span>:
+    <br/>{% if form.comment.errors %}{{ form.comment.errors }}{% endif %}{{ form.comment }}</p>
+  <p>
+  {{ form.next }}
+  {{ form.object_pk }}
+  {{ form.timestamp }}
+  {{ form.security_hash }}
+  {{ form.content_type }}
+  </p>
+ <script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php"></script>
+<script type="text/javascript">
+   FB.init("1b1435f8bb91333c38e7b351d493761e","/xd_receiver.htm", {"ifUserConnected" : update_user_box});
+</script> 

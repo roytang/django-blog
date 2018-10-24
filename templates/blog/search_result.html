@@ -1,0 +1,7 @@
+{% extends "blog/post_list.html" %}
+
+{% block title %}roytang.net / Search Results{% endblock %}
+
+{% block list-header %}
+<p class="list-header">Search results for "{{ query_string }}" &#8226; {{ count }} post{{ count|pluralize }}</p>
+{% endblock %}

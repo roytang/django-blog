@@ -1,0 +1,24 @@
+{% load md2 %}
+{% load gravatar %}
+{% load nofollow %}
+<li id="comment-{{ comment.id }}" class="comment even thread-even depth-1">
+	<div id="div-comment-{{ comment.id }}">
+	<div class="comment-author vcard">
+		{% gravatar comment.email %}
+		<span style="font-weight: bold;" class="commentauthor fn">{{ comment.user_name }}</span><small class="commentmetadata"> 
+		on <a title="13 minutes ago" href="#comment-9">{{ comment.submit_date|date:" M d Y h:i " }}</a> said:</small>
+			</div>
+
+	<div class="itemtext2">
+		<p>{{ comment.comment|force_escape|markdown2|linebreaks|nofollow|safe }}</p>
+ 
+	</div>
+
+	
+	<div class="reply">
+        {% if request.user.is_authenticated %}
+        <a href="{% url comments-delete comment.id %}">Delete</a>
+        {% endif %} 
+	</div>
+	</div>
+</li>

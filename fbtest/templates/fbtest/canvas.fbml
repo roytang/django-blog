@@ -1,0 +1,47 @@
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/button/assets/skins/sam/button.css" /> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/yuiloader/yuiloader-min.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/dom/dom-min.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/event/event-min.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/element/element-min.js"></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/button/button-min.js"></script> 
+<script type="text/javascript">
+    <!--
+    function () {
+ 
+        // "contentready" event handler for the "linkbuttonsfrommarkup" <div> 
+ 
+        YAHOO.util.Event.onContentReady("linkbuttonsfrommarkup", function() {
+ 
+            // Create Buttons from existing markup
+    
+            var oLinkButton1 = new YAHOO.widget.Button("linkbutton1");
+        
+        });
+    } ();
+    //-->
+</script>     
+<div>
+<fb:header>
+  {% comment %}
+    We can use {{ fbuser }} to get at the current user.
+    {{ fbuser.id }} will be the user's UID, and {{ fbuser.language }}
+    is his/her favorite language (Python :-).
+  {% endcomment %}
+  Welcome, <fb:name uid="{{ fbuser.id }}" firstnameonly="true" useyou="false" />!
+</fb:header>
+<div class="clearfix" style="float: left; border: 1px #d8dfea solid; padding: 10px 10px 10px 10px; margin-left: 30px; margin-bottom: 30px; width: 500px;">
+  <strong>Is Roy awesome?</strong>
+  <br /><br />
+
+  <div class="grayheader clearfix" >
+    <br /><br />
+
+    <form action="." method="POST">
+        <input type="radio" name="CHOICE" value="Y">Yes</input>
+        <input type="radio" name="CHOICE" value="N">No</input>
+        <input type="submit" value="Submit" />
+    </form>
+  </div>
+  
+	<a id="linkbutton1" href="http://www.yahoo.com">Yahoo!</a>   
+</div>

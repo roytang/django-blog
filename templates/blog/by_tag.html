@@ -1,0 +1,14 @@
+{% extends "blog/post_list.html" %}
+
+{% block title %}By Tag :: {{ tag }}{% endblock %}
+
+{% block feed_title %}Latest Posts tagged '{{ tag }}' RSS{% endblock %}
+
+{% block feed_url %}/feed/tags/{{ tag }}/{% endblock %}
+
+{% block list-header %}
+<p class="list-header">You are reading the posts tagged as <a href="#">'{{ tag }}'</a>. 
+There are {{ count }} post{{ count|pluralize }} in this tag. 
+You can also subscribe to the <a href="/feed/tags/{{ tag }}/">RSS Feed for '{{ tag }}'
+</p>
+{% endblock %}

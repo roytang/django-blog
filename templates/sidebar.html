@@ -1,0 +1,79 @@
+{% load feeds %}
+{% load cache %}
+<ul class="secondary">
+
+	<div id="search">
+		<h2>Search</h2>
+		<form action="{% url blog.views.search %}" id="formSearch">
+			<input name="q" />
+			<input type="submit" id="searchsubmit" value="go" />
+		</form>
+
+	</div>
+
+    <div class="sb-about">
+        <h2>Quick Profile</h2>
+        <ul>
+            <li><b>Roy Tang</b> Remember that name. Software developer by profession, scientist and engineer by education, gamer by habit, <a href="http://dailymtg.com">Magic</a> player on weekends. Frustrated writer and sketch artist. Student of life and all-around good guy. On a never-ending quest for awesomeness.</li>
+            <li>You should follow <a href="http://twitter.com/roytang">me on Twitter</a></li>
+            <li>You can contact me at <a href="mailto:awesome@roytang.net">awesome@roytang.net</a></li>
+            <li><a href="/about/">Read the entire about page!</a></li>
+        </ul>
+    </div>
+			
+	<div>
+        <h2>Stuff</h2>
+        <ul>
+            <li><a href="/archive/">Archives</a></li>
+            <li><a href="/tags/">Tags</a></li>
+            <li><a href="/demos/">Demos</a></li>
+            <li><a href="/random/">Random Post</a></li>
+            {% if user.is_authenticated and user.is_staff %}
+            <li><a href="/admin/blog/post/add/">New Post</a></li>
+            <li><a href="/admin/">Admin Panel</a></li>
+            <li><a href="/comments/moderate/">Comment Moderation Queue</a></li>
+            {% endif %}        
+        </ul>
+	</div>
+	
+	<div>
+	</div>
+
+{% block extra_sidebar %}
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 6000,
+  width: 200,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#000000',
+      color: '#ffffff',
+      links: '#4aed05'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('roytang').start();
+</script>
+{% endblock %}            	
+</ul>
+
+
+
+    

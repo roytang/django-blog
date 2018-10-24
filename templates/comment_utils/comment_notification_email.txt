@@ -1,0 +1,7 @@
+Comment posted to {{ content_object.title }}
+
+View comment at http://{{ site.domain_name }}/{{ content_object.get_absolute_url }}
+
+Comment details:
+
+{{ comment.comment }}

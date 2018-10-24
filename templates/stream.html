@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load feeds %}
+{% load cache %}
+
+{% block title %}Recent Activity{% endblock %}
+
+{% block feed_title %}Recent Activity Feed{% endblock %}
+
+{% block feed_url %}http://friendfeed.com/roytang?format=atom{% endblock %}
+
+{% block content %}
+<div class="post-list">
+<p class="list-header">Displaying Recent Activity &bull; <a href="/">View Recent Blog Posts</a></p>
+{% cache 120 friendfeedmain %}
+{% include_feed "http://friendfeed.com/roytang?format=atom" 20 feed_includes.html %}
+{% endcache %}
+</div>
+{% endblock %}

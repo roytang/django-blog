@@ -1,0 +1,9 @@
+{% extends "comments/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Your comment has been posted" %}.{% endblock %}
+
+{% block content %}
+  <h1>{% trans "Your comment has been posted" %}.</h1>
+  <p>Click <a href="{{ comment.content_object.get_absolute_url }}">here</a> to return to the post.</p>
+{% endblock %}

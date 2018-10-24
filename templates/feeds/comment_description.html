@@ -1,0 +1,4 @@
+{% load markup %}
+<p>
+{{ obj.user_name }}: {{ obj.comment|force_escape|markdown|linebreaks }}
+</p>

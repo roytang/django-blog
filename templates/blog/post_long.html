@@ -1,0 +1,30 @@
+{% load comments %}
+{% get_comment_count for post as comment_count %}
+
+<div id="post-{{ post.id }}" class="post hentry category-uncategorized item entry">
+				<div class="itemhead">
+					<h3><a href="{{ post.get_absolute_url }}" rel="bookmark" 
+					title="{{ post.title }}">{{ post.title }}</a></h3>
+					<br/><div class="chronodata">{{ post.date|date:"d M Y" }}</div>
+
+				</div>
+	
+				<div class="itemtext">
+				{{ post.body|safe|escape }}
+				</div>
+				<br class="clear">
+				<small class="metadata">			
+					<span class="category">Filed under: <a href="{% url blog.views.posts_by_category post.category.slug %}">{{ post.category.title }}</a>	</span>
+					{% if post.get_tags.0 %}
+          	<span class="category">Tagged:
+          	{% for tag in post.get_tags %}
+          		<a href="{% url blog.views.posts_by_tag tag %}">{{ tag }}</a> 
+          	{% endfor %}
+          	</span>
+          {% endif %}
+					&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="{{ post.get_absolute_url }}#disqus_thread" class="commentslink"  
+						title="Comment on {{ post.title }}">Comments</a>	
+					<br />				</small>
+			</div>
+	

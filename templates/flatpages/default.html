@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ flatpage.title }}{% endblock %}
+{% block body %}
+	<div class="primary">
+
+<h2>{{ flatpage.title }}</h2>
+{{ flatpage.content }}
+	</div>
+
+	
+<hr />
+
+{% include "sidebar.html" %}
+
+<div class="clear"></div>
+	
+{% endblock %}
